@@ -289,6 +289,13 @@
   font-variant-numeric:tabular-nums;
 }
 .ask b{font-weight:650; color:var(--ink)}
+.ask--num > ol > li::before{content:counter(ak,decimal-leading-zero)}
+.ask .when{
+  display:inline-block; margin-left:10px;
+  font-size:11px; letter-spacing:.09em; text-transform:uppercase; font-weight:600;
+  color:var(--mute); white-space:nowrap;
+}
+.ask + .ask{margin-top:-10px}
 
 /* ── 날짜 탭 — 회의를 고르는 자리 ────────────────────────────────────
  * 문서 안 탭(.tab)과 클래스를 겹치지 않게 .dtab으로 둔다.
@@ -1481,6 +1488,19 @@
       </li>
     </ol>
   </section>
+
+  <section class="ask ask--num" aria-label="데이터드리븐디자인 과업">
+    <span class="ask-k">데이터드리븐디자인 과업</span>
+    <ol>
+      <li>
+        <h3>J3 · J4 위저드 최종 마무리<span class="when">다음 주 회의 전까지</span></h3>
+      </li>
+      <li>
+        <h3>홈 · J3 · J4 의 <b>프론트 로직과 백엔드 연동이 개발 가능한 상태</b>가 되도록 개발자와 싱크<span class="when">다음 주 이후</span></h3>
+      </li>
+    </ol>
+  </section>
+
 
   <div class="note">
     <span class="nk">기록 출처</span>
